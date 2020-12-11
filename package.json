@@ -4,7 +4,9 @@
   "description": "Node Server Testing Challenge",
   "main": "server.js",
   "scripts": {
-    "test": "cross-env DB_ENV=testing jest --watch --verbose"
+    "test": "cross-env DB_ENV=testing jest --watch --verbose",
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "jest": {
     "testEnvironment": "node"
@@ -17,10 +19,12 @@
   "devDependencies": {
     "eslint": "^7.13.0",
     "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
     "supertest": "^6.0.1"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.2.0",
     "knex": "^0.21.12",
